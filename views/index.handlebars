@@ -1,0 +1,43 @@
+<h1>Eat them Burgers</h1>
+
+<h2>Burgers to be Eaten:</h2>
+<ul>
+  {{#each burgers}}
+  {{#unless this.devoured}}
+  <li>
+      {{this.burger_name}}
+    <form>
+      <input type='hidden' name='devoured' value='true'>
+      <button type='submit' data-id="{{this.id}}" class='change-devoured'>Devour!</button>
+      	<button class="delete-burger" data-id="{{this.id}}" data-newDevoured="{{devoured}}">Delete</button>
+    </form>
+  </li>
+  {{/unless}}
+  {{/each}}
+</ul>
+<br>
+
+<form class='update-form'>
+  <h2>Add a Burger</h2>
+  <div class='form-group'>
+    <label for='newBurger'>Burger Type:</label>
+    <input type='hidden' name='devoured' value='0'>
+    <input type='text' id='newBurger' name='burger_name'>
+    <button type='submit' class='create-burger'>New Burger</button>
+</form>
+<br>
+
+<h2>Burgers Eaten:</h2>
+<ul>
+  {{#each burgers}}
+  {{#if this.devoured}}
+  <li>
+      {{this.burger_name}}
+      	<button class="delete-burger" data-id="{{this.id}}" data-newDevoured="{{devoured}}">Delete</button>
+  </li>
+  <form>
+    <input type='hidden' name='devoured' value='false'>
+    </form>
+    {{/if}}
+    {{/each}}
+</ul>
