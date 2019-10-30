@@ -30,5 +30,11 @@ button {
     border-radius: 98%;
 } 
 
+ul {
+    text-align: center;
+    list-style: none;
+}
 
-
+form {
+    text-align: center;
+}
