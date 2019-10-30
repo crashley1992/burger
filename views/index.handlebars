@@ -1,6 +1,9 @@
 <h1>Eat them Burgers</h1>
 
 <h2>Burgers to be Eaten:</h2>
+<div class="img-container">
+<img class="burger" src="https://images-na.ssl-images-amazon.com/images/I/711Ng9GLyZL._SX466_.jpg">
+  </div>
 <ul>
   {{#each burgers}}
   {{#unless this.devoured}}
@@ -28,6 +31,9 @@
 <br>
 
 <h2>Burgers Eaten:</h2>
+<div class="img-container">
+  <img class="burger" src="https://ak5.picdn.net/shutterstock/videos/19128385/thumb/5.jpg">
+</div>
 <ul>
   {{#each burgers}}
   {{#if this.devoured}}
